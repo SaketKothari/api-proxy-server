@@ -6,6 +6,9 @@ const PORT = process.env.PORT || 5000;
 
 const app = express();
 
+// Routes
+app.use('/api', require('./routes'));
+
 // Enable cors
 app.use(cors());
 
