@@ -54,4 +54,4 @@ weatherForm.addEventListener('submit', (e) => {
 });
 
 // Initial fetch
-fetchWeather('Miami');
+fetchWeather('Udaipur');
