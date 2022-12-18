@@ -9,8 +9,13 @@ const API_KEY_VALUE = process.env.API_KEY_VALUE;
 
 router.get('/', async (req, res) => {
   try {
+    // using the url search params
+    const params = new URLSearchParams({
+      [API_KEY_NAME]: API_KEY_VALUE,
+    });
+
     // make the request and put the response in apiRes
-    const apiRes = await needle('get', `${API_BASE_URL}`);
+    const apiRes = await needle('get', `${API_BASE_URL}?${params}`);
     const data = apiRes.body;
 
     res.status(200).json(data);
