@@ -5,15 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Weather App</title>
+    <title>Weather App - Real-time Weather Information</title>
   </head>
   <body>
+    <div class="background-overlay"></div>
     <div class="container">
+      <div class="app-header">
+        <h1 class="app-title">🌤️ Weather Finder</h1>
+        <p class="app-subtitle">
+          Get real-time weather information for any city
+        </p>
+      </div>
+
+      <div class="search-box">
+        <form id="weather-form">
+          <div class="input-wrapper">
+            <svg
+              class="search-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+            <input
+              type="text"
+              id="city-input"
+              placeholder="Search for a city..."
+            />
+          </div>
+          <button type="submit" class="search-btn">
+            <span>Get Weather</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 7l5 5m0 0l-5 5m5-5H6"
+              />
+            </svg>
+          </button>
+        </form>
+      </div>
+
       <div class="weather"></div>
-      <form id="weather-form">
-        <input type="text" id="city-input" placeholder="Enter any city" />
-        <button type="submit">Submit</button>
-      </form>
     </div>
 
     <script src="main.js"></script>
